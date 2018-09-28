@@ -42,92 +42,6 @@
         }
       ],
       "shadow": true
-    },
-    {
-      "tag": "my-component",
-      "dependencies": [],
-      "componentClass": "MyComponent",
-      "componentPath": "components/my-component/my-component.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/my-component/my-component.css"
-          ]
-        }
-      },
-      "props": [
-        {
-          "name": "first",
-          "type": "String",
-          "attr": "first"
-        },
-        {
-          "name": "last",
-          "type": "String",
-          "attr": "last"
-        }
-      ],
-      "shadow": true
-    },
-    {
-      "tag": "todo-item",
-      "dependencies": [],
-      "componentClass": "TodoItem",
-      "componentPath": "components/todo-item/todo-item.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/todo-item/todo-item.scss"
-          ]
-        }
-      },
-      "props": [
-        {
-          "name": "done",
-          "type": "Boolean",
-          "mutable": true,
-          "attr": "done"
-        },
-        {
-          "name": "label",
-          "type": "String",
-          "attr": "label"
-        }
-      ],
-      "events": [
-        {
-          "event": "todoCompleted"
-        }
-      ],
-      "shadow": true
-    },
-    {
-      "tag": "todo-list",
-      "dependencies": [
-        "todo-item"
-      ],
-      "componentClass": "TodoList",
-      "componentPath": "components/todo-list/todo-list.js",
-      "styles": {
-        "$": {
-          "stylePaths": [
-            "components/todo-list/todo-list.scss"
-          ]
-        }
-      },
-      "props": [
-        {
-          "name": "listTitle",
-          "type": "String",
-          "attr": "list-title"
-        }
-      ],
-      "states": [
-        {
-          "name": "todos"
-        }
-      ],
-      "shadow": true
     }
   ],
   "collections": [],
@@ -140,12 +54,6 @@
     {
       "components": [
         "htp-button"
-      ]
-    },
-    {
-      "components": [
-        "todo-item",
-        "todo-list"
       ]
     }
   ]
