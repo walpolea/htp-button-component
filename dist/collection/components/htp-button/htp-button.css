@@ -6,6 +6,8 @@
   --button-radius: 5px;
   --button-height: 100%;
   --button-width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
   background-color: var(--button-color);
   box-shadow: var(--button-shadow);
   width: auto;
