@@ -1,0 +1,6 @@
+:host {
+  li[data-checked] {
+    text-decoration: line-through;
+    color: #ccc;
+  }
+}
