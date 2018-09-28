@@ -1,0 +1,34 @@
+{
+  "namespace": "HtpButton",
+  "fsNamespace": "htp-button",
+  "loader": "../htp-button.js",
+  "global": "htp-button.global.js",
+  "corePolyfilled": "htp-button.7bazsuz6.js",
+  "core": "htp-button.cmhdujgr.js",
+  "components": {
+    "htp-button": {
+      "bundleIds": {
+        "$": "uwf7rvx3"
+      },
+      "encapsulation": "shadow"
+    },
+    "my-component": {
+      "bundleIds": {
+        "$": "dqa0wgll"
+      },
+      "encapsulation": "shadow"
+    },
+    "todo-item": {
+      "bundleIds": {
+        "$": "wlx9sb2h"
+      },
+      "encapsulation": "shadow"
+    },
+    "todo-list": {
+      "bundleIds": {
+        "$": "wlx9sb2h"
+      },
+      "encapsulation": "shadow"
+    }
+  }
+}

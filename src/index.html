@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/htp-button.js"></script>
+
+  <style>
+    htp-button {
+      display: block;
+      margin: 20px;
+      /* --button-color: #666;
+      --bar-color: #c1d5de;
+      --text-color: White; */
+
+      --button-height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <todo-list list-title="Hello World"></todo-list>
+  <htp-button>
+    HOLD ME CLOSE
+  </htp-button> -->
+
+
+  <htp-button hold-time=300>
+    <h1>Another Button</h1>
+
+  </htp-button>
+
+
+
+  <script>
+    document.querySelector("htp-button").addEventListener("onHoldClick", () => {
+      console.log("GOT IT");
+
+    })
+  </script>
+</body>
+
+</html>
