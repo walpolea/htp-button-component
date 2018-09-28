@@ -141,6 +141,12 @@
       "components": [
         "htp-button"
       ]
+    },
+    {
+      "components": [
+        "todo-item",
+        "todo-list"
+      ]
     }
   ]
 }

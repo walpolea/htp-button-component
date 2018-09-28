@@ -8,19 +8,16 @@ export class HTPButton {
     }
     componentWillLoad() {
         this.el.addEventListener("mousedown", e => {
-            console.log("omd", e.button);
             if (e.button === 0)
                 this.startHold();
         });
         this.el.addEventListener("mouseup", e => {
-            console.log("omu", e.button);
             if (e.button === 0)
                 this.stopHold();
         });
     }
     startHold() {
         this.isHolding = true;
-        console.log("start hold");
         this.curHoldTime = 0;
         this.scheduleDoHold();
     }
@@ -30,11 +27,10 @@ export class HTPButton {
         }, this.holdTimeInterval);
     }
     doHold() {
-        console.log("interval", this.curHoldTime, this.holdTime);
         if (this.isHolding) {
             this.curHoldTime += this.holdTimeInterval;
             this.holdProgress = this.holdPct();
-            if (this.curHoldTime >= this.holdTime) {
+            if (this.curHoldTime > this.holdTime) {
                 this.stopHold();
                 this.doHoldClick();
             }
@@ -50,7 +46,6 @@ export class HTPButton {
     }
     doHoldClick() {
         this.onHoldClick.emit();
-        console.log("CLICKED!");
     }
     holdPct() {
         return Math.ceil((this.curHoldTime / this.holdTime) * 100);
@@ -58,10 +53,10 @@ export class HTPButton {
     render() {
         const holdAsWidth = { width: `${this.holdProgress}%` };
         const content = (h("button", null,
-            h("div", { class: "button-content" },
-                h("slot", null)),
             h("div", { class: "holdbar" },
-                h("div", { class: "holdprogress", style: holdAsWidth }))));
+                h("div", { class: "holdprogress", style: holdAsWidth })),
+            h("div", { class: "button-content" },
+                h("slot", null))));
         return content;
     }
     static get is() { return "htp-button"; }
