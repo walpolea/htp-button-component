@@ -31,6 +31,14 @@ export class HTPButton {
     this.el.addEventListener("mouseup", e => {
       if (e.button === 0) this.stopHold();
     });
+
+    this.el.addEventListener("touchstart", () => {
+      this.startHold();
+    });
+
+    this.el.addEventListener("touchend", () => {
+      this.stopHold();
+    });
   }
 
   startHold() {
